@@ -15,6 +15,44 @@
       --line: #dbe2ea;
       --text: #1f2937;
       --accent: #c8a96b;
+      .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background: #ffffff;
+  border: 1px solid #dfe5eb;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(15, 35, 55, 0.08);
+}
+
+.blog-card h3 {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
+.blog-card p {
+  line-height: 1.7;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #667788;
+}
+
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
     }
 
     * { box-sizing: border-box; }
@@ -356,11 +394,14 @@
     <div class="container nav">
       <a class="brand" href="#home">SAMUEL JOHN KNOX</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#ascend">Project ASCEND</a>
-        <a href="#consulting">Consulting</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Connect</a>
+       <nav>
+  <a href="#about">About</a>
+  <a href="#ascend">Project ASCEND</a>
+  <a href="#consulting">Consulting</a>
+  <a href="#blog">Blog</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Connect</a>
+</nav>
       </nav>
     </div>
   </header>
@@ -490,6 +531,74 @@
         </div>
       </div>
     </section>
+    <section id="blog" class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Insights & Resources</p>
+      <h2>Operational Intelligence Blog</h2>
+      <p>
+        Practical insights on executive operations, artificial intelligence,
+        process improvement, hospitality leadership, and organizational
+        transformation.
+      </p>
+    </div>
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <p class="blog-date">July 14, 2026</p>
+
+        <h3>
+          How AI Can Give Hotel General Managers More Time to Lead
+        </h3>
+
+        <p>
+          Hotel General Managers spend significant time reviewing reports,
+          responding to routine communication, preparing schedules, and
+          tracking operational issues. Practical AI tools can reduce this
+          administrative workload while keeping leadership decisions in
+          human hands.
+        </p>
+
+        <a href="blog/ai-for-hotel-general-managers.html"
+           class="button secondary">
+          Read Article
+        </a>
+      </article>
+
+      <article class="blog-card">
+        <p class="blog-date">Coming Soon</p>
+
+        <h3>
+          Finding High-Value AI Opportunities in Everyday Operations
+        </h3>
+
+        <p>
+          A practical approach for identifying repetitive work, workflow
+          bottlenecks, reporting delays, and other opportunities for
+          responsible automation.
+        </p>
+      </article>
+
+      <article class="blog-card">
+        <p class="blog-date">Coming Soon</p>
+
+        <h3>
+          Why AI Transformation Must Begin With Process Clarity
+        </h3>
+
+        <p>
+          Adding technology to an unclear or inconsistent process can
+          accelerate the wrong work. Effective transformation begins with
+          understanding how the operation currently functions.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
 
     <section class="section-alt" id="resume">
       <div class="container">
