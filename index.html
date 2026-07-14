@@ -1,89 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Samuel John Knox — Executive operations leader, founder of Knox Operational Intelligence Group, and creator of Project ASCEND." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Samuel John Knox | Executive Operations & AI Transformation</title>
+
+  <meta name="description" content="Samuel John Knox is an executive operations leader and founder of Knox Operational Intelligence Group, helping organizations improve performance through operational excellence, AI-enabled transformation, and practical process improvement.">
+  <meta name="author" content="Samuel John Knox">
+  <meta name="theme-color" content="#0b2742">
+
+  <meta property="og:title" content="Samuel John Knox | Executive Operations & AI Transformation">
+  <meta property="og:description" content="Turning operational complexity into clarity, control, and measurable performance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="samuel-knox.jpg.jpeg">
+
   <style>
     :root {
-      --navy: #10243e;
-      --blue: #2f5f8f;
-      --slate: #475569;
-      --light: #f5f7fa;
+      --navy: #0b2742;
+      --navy-light: #123f65;
+      --blue: #1d6fa5;
+      --blue-light: #dcecf6;
+      --gold: #d6a94f;
+      --ink: #172331;
+      --muted: #5d6b79;
       --white: #ffffff;
-      --line: #dbe2ea;
-      --text: #1f2937;
-      --accent: #c8a96b;
-      .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.blog-card {
-  background: #ffffff;
-  border: 1px solid #dfe5eb;
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 8px 24px rgba(15, 35, 55, 0.08);
-}
-
-.blog-card h3 {
-  margin-top: 10px;
-  margin-bottom: 16px;
-  line-height: 1.35;
-}
-
-.blog-card p {
-  line-height: 1.7;
-}
-
-.blog-date {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #667788;
-}
-
-@media (max-width: 900px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-}
+      --off-white: #f6f8fa;
+      --border: #dce3e9;
+      --shadow: 0 16px 40px rgba(11, 39, 66, 0.12);
+      --radius: 18px;
+      --max-width: 1180px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+      color: var(--ink);
       background: var(--white);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    a { color: inherit; text-decoration: none; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--navy);
+      line-height: 1.18;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 5vw, 4.7rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    section {
+      padding: 96px 24px;
+    }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(100%, var(--max-width));
       margin: 0 auto;
     }
 
-    header {
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 46px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(16, 36, 62, 0.97);
-      color: var(--white);
-      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: rgba(11, 39, 66, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav {
-      min-height: 70px;
+    .nav-wrap {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -91,317 +131,590 @@
     }
 
     .brand {
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: .03em;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
     }
 
-    .nav-links {
+    .brand span {
+      display: block;
+      margin-top: 2px;
+      color: #bcd2e1;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: var(--white);
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .site-nav {
       display: flex;
-      gap: 22px;
-      font-size: .94rem;
+      align-items: center;
+      gap: 21px;
     }
 
-    .nav-links a:hover { color: var(--accent); }
+    .site-nav a {
+      color: #edf5fa;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 650;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      color: #82c3eb;
+    }
 
     .hero {
-      background:
-        linear-gradient(135deg, rgba(16,36,62,.98), rgba(47,95,143,.92)),
-        radial-gradient(circle at top right, rgba(200,169,107,.25), transparent 35%);
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      padding-top: 74px;
+      padding-bottom: 74px;
       color: var(--white);
-      padding: 100px 0 88px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(29, 111, 165, 0.42), transparent 34%),
+        linear-gradient(135deg, #071d32 0%, #0b2742 55%, #123f65 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap: 56px;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
       align-items: center;
+      gap: 72px;
     }
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: .82rem;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 6vw, 5rem);
-      line-height: 1.03;
-      margin: 0 0 20px;
-      max-width: 850px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      font-size: 1.16rem;
-      color: #e6edf5;
-      margin: 0 0 28px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 6px;
-      border: 1px solid transparent;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-
-    .button-primary {
-      background: var(--accent);
-      color: var(--navy);
-    }
-
-    .button-primary:hover { transform: translateY(-2px); }
-
-    .button-secondary {
-      border-color: rgba(255,255,255,.45);
+    .hero h1 {
       color: var(--white);
     }
 
-    .button-secondary:hover {
-      background: rgba(255,255,255,.08);
+    .hero h1 span {
+      color: #9ed2f1;
     }
 
-    .profile-card {
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 16px;
-      padding: 28px;
-      backdrop-filter: blur(8px);
+    .hero-copy {
+      max-width: 760px;
+      color: #d6e4ee;
+      font-size: 1.15rem;
     }
 
-    .profile-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.3rem;
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
     }
 
-    .profile-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+      border-radius: 9px;
+      padding: 11px 20px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
     }
 
-    .profile-card li {
-      padding: 11px 0;
-      border-bottom: 1px solid rgba(255,255,255,.12);
+    .button:hover,
+    .button:focus {
+      transform: translateY(-2px);
     }
 
-    .profile-card li:last-child { border-bottom: 0; }
-
-    section {
-      padding: 82px 0;
-    }
-
-    .section-alt { background: var(--light); }
-
-    .section-heading {
-      max-width: 800px;
-      margin-bottom: 42px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      margin: 0 0 14px;
+    .button-primary {
       color: var(--navy);
+      background: var(--white);
     }
 
-    .section-heading p {
-      font-size: 1.08rem;
-      color: var(--slate);
-      margin: 0;
+    .button-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.58);
+      background: transparent;
+    }
+
+    .button-blue {
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    .button-soft {
+      color: var(--navy);
+      border-color: var(--border);
+      background: var(--white);
+    }
+
+    .portrait-frame {
+      position: relative;
+      max-width: 390px;
+      margin-left: auto;
+    }
+
+    .portrait-frame::before {
+      content: "";
+      position: absolute;
+      inset: -18px 18px 18px -18px;
+      border: 2px solid rgba(158, 210, 241, 0.45);
+      border-radius: 28px;
+    }
+
+    .portrait {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border: 7px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 24px 65px rgba(0, 0, 0, 0.34);
     }
 
     .stats {
+      padding-top: 0;
+      padding-bottom: 0;
+      background: var(--off-white);
+    }
+
+    .stats-grid {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-top: 34px;
+      transform: translateY(-34px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     .stat {
-      border: 1px solid var(--line);
-      padding: 24px;
-      border-radius: 10px;
-      background: var(--white);
+      padding: 28px 22px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
     }
 
     .stat strong {
       display: block;
-      font-size: 1.9rem;
-      color: var(--blue);
-      line-height: 1.1;
-      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 1.75rem;
     }
 
-    .cards {
+    .stat span {
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .about {
+      background: var(--off-white);
+    }
+
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 66px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .focus-card {
+      border-left: 5px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 34px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+    }
+
+    .check-list li {
+      position: relative;
+      padding: 10px 0 10px 29px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .check-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .ascend {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .ascend h2,
+    .ascend h3 {
+      color: var(--white);
+    }
+
+    .ascend .eyebrow {
+      color: #9ed2f1;
+    }
+
+    .ascend .section-intro {
+      color: #c9d9e5;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 22px;
     }
 
-    .card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 12px;
+    .ascend-card {
+      min-height: 245px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: var(--radius);
       padding: 28px;
-      box-shadow: 0 10px 30px rgba(16,36,62,.05);
+      background: rgba(255,255,255,0.07);
     }
 
-    .card h3 {
-      margin-top: 0;
+    .card-number {
+      display: inline-grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 50%;
       color: var(--navy);
-      font-size: 1.22rem;
+      background: #9ed2f1;
+      font-weight: 900;
     }
 
-    .card p { color: var(--slate); }
-
-    .project {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 42px;
-      align-items: start;
+    .ascend-card p {
+      color: #c9d9e5;
+      font-size: 0.96rem;
     }
 
-    .feature-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .feature {
-      background: var(--white);
-      border-left: 4px solid var(--accent);
-      padding: 18px 20px;
-      box-shadow: 0 8px 20px rgba(16,36,62,.05);
-    }
-
-    .feature strong {
-      display: block;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .vision-box {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 14px;
+    .vision {
+      margin-top: 34px;
+      border: 1px solid rgba(255,255,255,0.17);
+      border-radius: var(--radius);
       padding: 34px;
+      background: rgba(255,255,255,0.04);
     }
 
-    .vision-box h3 {
-      margin-top: 0;
-      font-size: 1.7rem;
+    .services {
+      background: var(--white);
     }
 
-    .vision-box p { color: #dce6f0; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card,
+    .blog-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 31px;
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(11,39,66,0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover,
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      display: grid;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      color: var(--blue);
+      background: var(--blue-light);
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .service-card p,
+    .blog-card p {
+      color: var(--muted);
+    }
+
+    .blog {
+      background: var(--off-white);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .blog-date {
+      margin-bottom: 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .resume {
+      background: var(--white);
+    }
 
     .resume-grid {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 34px;
-      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 54px;
+      align-items: center;
     }
 
-    .resume-summary {
-      background: var(--navy);
-      color: var(--white);
-      padding: 32px;
-      border-radius: 12px;
-    }
-
-    .resume-summary h3 { margin-top: 0; }
-    .resume-summary p { color: #dce6f0; }
-
-    .skill-cloud {
+    .capability-cloud {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .skill {
-      padding: 8px 12px;
-      border: 1px solid var(--line);
+    .capability-cloud span {
+      border: 1px solid var(--border);
       border-radius: 999px;
-      background: var(--white);
-      font-size: .92rem;
+      padding: 8px 13px;
+      color: var(--navy);
+      background: var(--off-white);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .resume-panel {
+      border-radius: var(--radius);
+      padding: 40px;
+      color: var(--white);
+      background: linear-gradient(145deg, var(--navy), var(--navy-light));
+      box-shadow: var(--shadow);
+    }
+
+    .resume-panel h3 {
+      color: var(--white);
+      font-size: 1.65rem;
+    }
+
+    .resume-panel p {
+      color: #d5e4ee;
     }
 
     .contact {
-      background: linear-gradient(135deg, var(--navy), var(--blue));
       color: var(--white);
       text-align: center;
+      background:
+        linear-gradient(rgba(7, 29, 50, 0.92), rgba(7, 29, 50, 0.92)),
+        radial-gradient(circle at center, #1d6fa5, #0b2742);
     }
 
     .contact h2 {
       color: var(--white);
-      margin-top: 0;
-      font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .contact p {
-      max-width: 700px;
-      margin: 0 auto 26px;
-      color: #e8eef5;
+    .contact .section-intro {
+      margin-right: auto;
+      margin-left: auto;
+      color: #c9d9e5;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .contact-details a {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 10px;
+      padding: 13px 18px;
+      color: var(--white);
+      text-decoration: none;
+      background: rgba(255,255,255,0.08);
+      font-weight: 750;
     }
 
     footer {
-      background: #0b1728;
-      color: #cfd8e3;
-      padding: 26px 0;
-      font-size: .9rem;
+      padding: 28px 20px;
+      color: #aebfcb;
       text-align: center;
+      background: #071d32;
+      font-size: 0.88rem;
     }
 
-    @media (max-width: 900px) {
+    footer a {
+      color: #d5e4ee;
+    }
+
+    @media (max-width: 1000px) {
+      .site-nav {
+        gap: 13px;
+      }
+
+      .site-nav a {
+        font-size: 0.84rem;
+      }
+
       .hero-grid,
-      .project,
+      .about-grid,
       .resume-grid {
         grid-template-columns: 1fr;
       }
 
-      .stats,
-      .cards {
+      .portrait-frame {
+        width: min(100%, 360px);
+        margin: 20px auto 0;
+      }
+
+      .card-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .nav-links { display: none; }
+      .service-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    @media (max-width: 600px) {
-      .hero { padding: 78px 0 64px; }
-      section { padding: 64px 0; }
-      .stats,
-      .cards {
+    @media (max-width: 760px) {
+      section {
+        padding: 74px 20px;
+      }
+
+      .nav-wrap {
+        position: relative;
+        min-height: 68px;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 20px;
+        background: var(--navy);
+        border-top: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .site-nav.open {
+        display: flex;
+      }
+
+      .site-nav a {
+        padding: 12px 4px;
+        font-size: 0.96rem;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .stats-grid,
+      .card-grid {
         grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        transform: translateY(-24px);
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
       }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home">SAMUEL JOHN KNOX</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-       <nav>
-  <a href="#about">About</a>
-  <a href="#ascend">Project ASCEND</a>
-  <a href="#consulting">Consulting</a>
-  <a href="#blog">Blog</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Connect</a>
-</nav>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Samuel John Knox home">
+        SAMUEL JOHN KNOX
+        <span>KNOX OPERATIONAL INTELLIGENCE GROUP</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ascend">Project ASCEND</a>
+        <a href="#consulting">Consulting</a>
+        <a href="#blog">Blog</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Connect</a>
       </nav>
     </div>
   </header>
@@ -410,272 +723,349 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Executive Operations & AI-Enabled Transformation</div>
-          <h1>Turning operational complexity into clarity, control, and measurable performance.</h1>
-          <p>
-            Samuel John Knox is an executive operations leader with more than 30 years of experience in
-            multi-site leadership, financial performance, process improvement, and organizational transformation.
-            He is the founder of Knox Operational Intelligence Group and creator of Project ASCEND.
+          <span class="eyebrow">Executive Operations & AI-Enabled Transformation</span>
+
+          <h1>
+            Turning operational complexity into
+            <span>clarity, control, and measurable performance.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Samuel John Knox is an executive operations leader with more than 30 years of
+            experience in multi-site leadership, financial performance, process improvement,
+            talent development, and organizational transformation. He is the founder of Knox
+            Operational Intelligence Group and creator of Project ASCEND.
           </p>
-          <div class="cta-row">
+
+          <div class="button-row">
             <a class="button button-primary" href="#ascend">Explore Project ASCEND</a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/samueljohnknox" target="_blank" rel="noopener">View LinkedIn</a>
+            <a class="button button-outline" href="Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+            <a class="button button-outline" href="mailto:Knoxaiops@gmail.com">Email Samuel</a>
           </div>
         </div>
 
-        <aside class="profile-card">
-          <h3>Leadership Focus</h3>
-          <ul>
-            <li>Executive & Regional Operations</li>
-            <li>AI-Enabled Business Transformation</li>
-            <li>Operational Excellence</li>
-            <li>P&amp;L and Multi-Million-Dollar Budget Leadership</li>
-            <li>Process Improvement & Automation</li>
+        <div class="portrait-frame">
+          <img
+            class="portrait"
+            src="samuel-knox.jpg.jpeg"
+            alt="Samuel John Knox, executive operations and AI transformation leader"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Leadership highlights">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <strong>30+</strong>
+            <span>Years of leadership experience</span>
+          </div>
+          <div class="stat">
+            <strong>$5M+</strong>
+            <span>Budget responsibility</span>
+          </div>
+          <div class="stat">
+            <strong>Multi-Site</strong>
+            <span>Complex operations leadership</span>
+          </div>
+          <div class="stat">
+            <strong>AI-Enabled</strong>
+            <span>Process and performance transformation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">Executive Profile</span>
+          <h2>Proven leadership strengthened by practical AI.</h2>
+
+          <p>
+            Samuel combines decades of operational leadership with a forward-looking approach
+            to artificial intelligence, automation, analytics, and organizational intelligence.
+            His work focuses on helping organizations improve performance without losing sight
+            of people, accountability, service, or execution.
+          </p>
+
+          <p>
+            His background includes executive operations, multi-site management, financial
+            performance, vendor oversight, compliance, customer experience, team development,
+            process improvement, and large-scale budget responsibility.
+          </p>
+
+          <p>
+            He brings a practical operator’s perspective to transformation: understand the work,
+            identify the real constraint, strengthen the process, and apply technology where it
+            creates measurable business value.
+          </p>
+        </div>
+
+        <aside class="focus-card">
+          <span class="eyebrow">Leadership Focus</span>
+          <h3>Core areas of expertise</h3>
+
+          <ul class="check-list">
+            <li>Executive and regional operations</li>
+            <li>AI-enabled business transformation</li>
+            <li>Operational excellence and process improvement</li>
+            <li>P&amp;L and multi-million-dollar budget leadership</li>
+            <li>Workflow automation and performance analytics</li>
+            <li>Team development and accountability systems</li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section id="about">
+    <section class="ascend" id="ascend">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Executive Profile</div>
-          <h2>Proven leadership strengthened by practical AI.</h2>
-          <p>
-            Samuel combines decades of operational leadership with a forward-looking approach to AI,
-            automation, analytics, and organizational intelligence. His work is centered on helping
-            organizations improve performance without losing sight of people, accountability, or execution.
-          </p>
-        </div>
+        <span class="eyebrow">Flagship Initiative</span>
+        <h2>Project ASCEND</h2>
 
-        <div class="stats">
-          <div class="stat"><strong>30+ Years</strong>Leadership and operations experience</div>
-          <div class="stat"><strong>$5M+</strong>Budget responsibility</div>
-          <div class="stat"><strong>Multi-Site</strong>Complex operations leadership</div>
-          <div class="stat"><strong>AI-Enabled</strong>Process and performance transformation</div>
-        </div>
-      </div>
-    </section>
+        <p class="section-intro">
+          Project ASCEND is an AI-powered operational intelligence platform designed to help
+          organizations understand how work gets done, where performance is being lost, and
+          which improvements will create the greatest impact.
+        </p>
 
-    <section class="section-alt" id="ascend">
-      <div class="container project">
-        <div>
-          <div class="section-heading">
-            <div class="eyebrow">Flagship Initiative</div>
-            <h2>Project ASCEND</h2>
+        <div class="card-grid">
+          <article class="ascend-card">
+            <span class="card-number">1</span>
+            <h3>Process Mapping</h3>
             <p>
-              Project ASCEND is an AI-powered operational intelligence platform designed to help organizations
-              gain a clearer understanding of how work gets done, where performance is being lost, and which
-              improvements will create the greatest impact.
+              Document workflows and create a shared view of operational reality across teams,
+              departments, and decision points.
             </p>
-          </div>
+          </article>
 
-          <div class="feature-list">
-            <div class="feature"><strong>Process Mapping</strong>Document workflows and create a shared view of operational reality.</div>
-            <div class="feature"><strong>Opportunity Identification</strong>Reveal inefficiencies, bottlenecks, duplication, and automation opportunities.</div>
-            <div class="feature"><strong>Actionable Recommendations</strong>Translate operational data into prioritized improvement initiatives.</div>
-            <div class="feature"><strong>Scalable Intelligence</strong>Create a repeatable system for continuous improvement and performance visibility.</div>
-          </div>
+          <article class="ascend-card">
+            <span class="card-number">2</span>
+            <h3>Opportunity Identification</h3>
+            <p>
+              Reveal inefficiencies, bottlenecks, duplication, control gaps, and practical
+              automation opportunities.
+            </p>
+          </article>
+
+          <article class="ascend-card">
+            <span class="card-number">3</span>
+            <h3>Actionable Recommendations</h3>
+            <p>
+              Translate operational findings into prioritized improvement initiatives with clear
+              business value and ownership.
+            </p>
+          </article>
+
+          <article class="ascend-card">
+            <span class="card-number">4</span>
+            <h3>Scalable Intelligence</h3>
+            <p>
+              Build a repeatable system for continuous improvement, stronger visibility, and
+              better management decisions.
+            </p>
+          </article>
         </div>
 
-        <div class="vision-box">
+        <div class="vision">
           <h3>The ASCEND Vision</h3>
           <p>
-            Organizations often have more data than insight and more activity than clarity. Project ASCEND is
-            designed to bridge that gap.
-          </p>
-          <p>
-            The goal is not to replace leadership judgment. It is to strengthen it—providing managers and
-            executives with a practical system for seeing patterns, improving consistency, reducing unnecessary
-            work, and making better operational decisions.
+            Organizations often have more data than insight and more activity than clarity.
+            Project ASCEND is designed to bridge that gap. The goal is not to replace leadership
+            judgment. It is to strengthen it by helping managers and executives see patterns,
+            improve consistency, reduce unnecessary work, and make better operational decisions.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="consulting">
+    <section class="services" id="consulting">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Knox Operational Intelligence Group</div>
-          <h2>Consulting built around practical transformation.</h2>
-          <p>
-            KOIG bridges traditional operational leadership with modern AI capabilities. The consulting approach
-            is designed for organizations that want meaningful improvement—not technology for technology's sake.
-          </p>
-        </div>
+        <span class="eyebrow">Knox Operational Intelligence Group</span>
+        <h2>Consulting built around practical transformation.</h2>
 
-        <div class="cards">
-          <article class="card">
+        <p class="section-intro">
+          KOIG bridges traditional operational leadership with modern AI capabilities for
+          organizations seeking meaningful improvement—not technology for technology’s sake.
+        </p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">01</div>
             <h3>Operational Assessment</h3>
             <p>
-              Evaluate workflows, staffing practices, controls, documentation, performance measures, and decision
-              points to identify operational risk and improvement potential.
+              Evaluate workflows, staffing practices, controls, documentation, performance
+              measures, and decision points to identify operational risk and improvement
+              potential.
             </p>
           </article>
 
-          <article class="card">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">02</div>
             <h3>AI Opportunity Roadmap</h3>
             <p>
-              Prioritize practical AI and automation opportunities based on business value, implementation effort,
-              organizational readiness, and measurable return.
+              Prioritize practical AI and automation opportunities based on business value,
+              implementation effort, organizational readiness, and measurable return.
             </p>
           </article>
 
-          <article class="card">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">03</div>
             <h3>Performance Systems</h3>
             <p>
-              Build stronger KPI frameworks, dashboards, accountability rhythms, and management processes that
-              support consistent execution and continuous improvement.
+              Build stronger KPI frameworks, dashboards, accountability rhythms, and management
+              processes that support consistent execution and continuous improvement.
             </p>
           </article>
         </div>
       </div>
     </section>
-    <section id="blog" class="section">
-  <div class="container">
 
-    <div class="section-heading">
-      <p class="eyebrow">Insights & Resources</p>
-      <h2>Operational Intelligence Blog</h2>
-      <p>
-        Practical insights on executive operations, artificial intelligence,
-        process improvement, hospitality leadership, and organizational
-        transformation.
-      </p>
-    </div>
-
-    <div class="blog-grid">
-
-      <article class="blog-card">
-        <p class="blog-date">July 14, 2026</p>
-
-        <h3>
-          How AI Can Give Hotel General Managers More Time to Lead
-        </h3>
-
-        <p>
-          Hotel General Managers spend significant time reviewing reports,
-          responding to routine communication, preparing schedules, and
-          tracking operational issues. Practical AI tools can reduce this
-          administrative workload while keeping leadership decisions in
-          human hands.
-        </p>
-
-        <a href="blog/ai-for-hotel-general-managers.html"
-           class="button secondary">
-          Read Article
-        </a>
-      </article>
-
-      <article class="blog-card">
-        <p class="blog-date">Coming Soon</p>
-
-        <h3>
-          Finding High-Value AI Opportunities in Everyday Operations
-        </h3>
-
-        <p>
-          A practical approach for identifying repetitive work, workflow
-          bottlenecks, reporting delays, and other opportunities for
-          responsible automation.
-        </p>
-      </article>
-
-      <article class="blog-card">
-        <p class="blog-date">Coming Soon</p>
-
-        <h3>
-          Why AI Transformation Must Begin With Process Clarity
-        </h3>
-
-        <p>
-          Adding technology to an unclear or inconsistent process can
-          accelerate the wrong work. Effective transformation begins with
-          understanding how the operation currently functions.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-    <section class="section-alt" id="resume">
+    <section class="blog" id="blog">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Professional Background</div>
+        <span class="eyebrow">Insights & Resources</span>
+        <h2>Operational Intelligence Blog</h2>
+
+        <p class="section-intro">
+          Practical insights on executive operations, AI adoption, process improvement,
+          hospitality leadership, organizational performance, and responsible transformation.
+        </p>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <p class="blog-date">Featured Insight</p>
+            <h3>How AI Can Give Hotel General Managers More Time to Lead</h3>
+            <p>
+              AI can reduce routine administrative work, organize operational information, and
+              help hotel leaders spend more time developing talent, improving service, and
+              growing performance.
+            </p>
+            <a class="text-link" href="blog/ai-for-hotel-general-managers.html">
+              Read article →
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-date">Coming Soon</p>
+            <h3>Finding High-Value AI Opportunities in Everyday Operations</h3>
+            <p>
+              A practical approach to identifying repetitive work, reporting delays, workflow
+              bottlenecks, and responsible automation opportunities.
+            </p>
+          </article>
+
+          <article class="blog-card">
+            <p class="blog-date">Coming Soon</p>
+            <h3>Why AI Transformation Must Begin With Process Clarity</h3>
+            <p>
+              Technology cannot repair a process that has not been understood. Strong
+              transformation begins by making operational reality visible.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume" id="resume">
+      <div class="container resume-grid">
+        <div>
+          <span class="eyebrow">Professional Background</span>
           <h2>Executive experience that translates across industries.</h2>
-        </div>
 
-        <div class="resume-grid">
-          <div class="resume-summary">
-            <h3>Career Summary</h3>
-            <p>
-              Executive operations leader with extensive experience in multi-site management, financial
-              performance, team development, vendor oversight, compliance, customer experience, and process
-              improvement.
-            </p>
-            <p>
-              Certified Hotel Administrator since 2012 and Choice Hotels Certified Hotel Manager since 2016.
-              Currently expanding this leadership foundation into AI-enabled operations, business intelligence,
-              consulting, and digital transformation.
-            </p>
-          </div>
+          <p class="section-intro">
+            Executive operations leader with extensive experience in multi-site management,
+            financial performance, team development, vendor oversight, compliance, customer
+            experience, and process improvement.
+          </p>
 
-          <div>
-            <h3>Core Capabilities</h3>
-            <div class="skill-cloud">
-              <span class="skill">Executive Operations</span>
-              <span class="skill">Operational Excellence</span>
-              <span class="skill">Multi-Site Leadership</span>
-              <span class="skill">P&amp;L Management</span>
-              <span class="skill">Budget Oversight</span>
-              <span class="skill">Business Transformation</span>
-              <span class="skill">AI Strategy</span>
-              <span class="skill">Workflow Automation</span>
-              <span class="skill">Process Improvement</span>
-              <span class="skill">Vendor Management</span>
-              <span class="skill">KPI Development</span>
-              <span class="skill">Performance Analytics</span>
-              <span class="skill">Compliance</span>
-              <span class="skill">Program Leadership</span>
-              <span class="skill">Team Development</span>
-            </div>
-
-            <div class="cta-row" style="margin-top: 28px;">
-              <a class="button button-primary" href="resume.pdf">Download Resume</a>
-              <a class="button" style="border-color:#b8c3d0;" href="https://www.linkedin.com/in/samueljohnknox" target="_blank" rel="noopener">LinkedIn Profile</a>
-            </div>
-            <p style="font-size:.88rem;color:#64748b;margin-top:14px;">
-              Place your current resume PDF in the same website folder and name it <strong>resume.pdf</strong> to activate the download button.
-            </p>
+          <div class="capability-cloud" aria-label="Core capabilities">
+            <span>Executive Operations</span>
+            <span>Operational Excellence</span>
+            <span>Multi-Site Leadership</span>
+            <span>P&amp;L Management</span>
+            <span>Budget Oversight</span>
+            <span>Business Transformation</span>
+            <span>AI Strategy</span>
+            <span>Workflow Automation</span>
+            <span>Process Improvement</span>
+            <span>Vendor Management</span>
+            <span>KPI Development</span>
+            <span>Performance Analytics</span>
+            <span>Compliance</span>
+            <span>Program Leadership</span>
+            <span>Team Development</span>
           </div>
         </div>
+
+        <aside class="resume-panel">
+          <h3>View or download the full résumé</h3>
+          <p>
+            Review Samuel’s leadership experience, operational background, certifications,
+            measurable responsibilities, and professional qualifications.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="Resume.pdf" target="_blank" rel="noopener">
+              Open Resume
+            </a>
+
+            <a class="button button-outline" href="Resume.pdf" download>
+              Download PDF
+            </a>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container">
+        <span class="eyebrow">Connect</span>
         <h2>Let’s improve how your organization operates.</h2>
-        <p>
-          Connect to discuss executive operations leadership, AI-enabled transformation, Project ASCEND,
-          operational assessments, or consulting opportunities.
+
+        <p class="section-intro">
+          Connect to discuss executive operations leadership, AI-enabled transformation,
+          Project ASCEND, operational assessments, consulting opportunities, or professional
+          collaboration.
         </p>
-        <div class="cta-row" style="justify-content:center;">
-          <a class="button button-primary" href="https://www.linkedin.com/in/samueljohnknox" target="_blank" rel="noopener">Connect on LinkedIn</a>
-          <a class="button button-secondary" href="mailto:knoxaiops@gmail.com">Email Samuel</a>
+
+        <div class="contact-details">
+          <a href="mailto:Knoxaiops@gmail.com?subject=Inquiry%20from%20Knox%20AI%20Ops%20Website">
+            ✉ Knoxaiops@gmail.com
+          </a>
+
+          <a href="https://www.linkedin.com/in/samueljohnknox" target="_blank" rel="noopener noreferrer">
+            in LinkedIn Profile
+          </a>
+
+          <a href="Resume.pdf" target="_blank" rel="noopener">
+            ↗ View Resume
+          </a>
         </div>
-        <p style="font-size:.88rem;margin-top:16px;">
-          Replace <strong>knoxaiops@gmail.com</strong> in the HTML file with your preferred professional email address.
-        </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Samuel John Knox. Executive Operations | AI-Enabled Transformation | Knox Operational Intelligence Group
-    </div>
+    © 2026 Samuel John Knox · Knox Operational Intelligence Group ·
+    <a href="mailto:Knoxaiops@gmail.com">Knoxaiops@gmail.com</a>
   </footer>
+
+  <script>
+    const menuButton = document.querySelector(".nav-toggle");
+    const navigation = document.querySelector(".site-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
 </body>
 </html>
