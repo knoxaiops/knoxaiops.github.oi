@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Knox AI Ops</title>
+  <meta name="description" content="Contact Knox AI Ops by email or phone. View our regular hours of operation and prepare a simple email message.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html">Knox AI Ops</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Front Porch</a>
+        <a href="conversation-room.html">Conversation Room</a>
+        <a href="gift-shop.html">Gift Shop</a>
+        <a aria-current="page" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Contact Knox AI Ops</p>
+        <h1>We're glad you're here.</h1>
+        <p class="lead">Whether you have a question about AI, one of our resources, or simply want to say hello, we'd be happy to hear from you.</p>
+      </div>
+
+      <div class="wrap two-column">
+        <section class="contact-card">
+          <h2>Reach Us</h2>
+          <p><strong>Email</strong><br><a href="mailto:knoxaiops@gmail.com">knoxaiops@gmail.com</a></p>
+          <p><strong>Phone</strong><br><a href="tel:+13213280884">(321) 328-0884</a></p>
+
+          <h3>Hours of Operation</h3>
+          <p>Monday–Thursday: 9:00 AM–4:00 PM ET<br>
+          Friday: 9:00 AM–2:00 PM ET<br>
+          Saturday–Sunday: Closed</p>
+
+          <div class="notice">
+            Messages may be sent at any time. We will respond during regular operating hours.
+          </div>
+        </section>
+
+        <section class="form-card" aria-labelledby="email-form-title">
+          <h2 id="email-form-title">Prepare an Email</h2>
+          <p>Complete the short form below. When you select <strong>Open Email</strong>, your email program will open with your message prepared.</p>
+
+          <form id="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div class="button-row">
+              <button class="button primary" type="submit">Open Email</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="closing-panel">
+      <div class="wrap narrow center">
+        <blockquote>“Every conversation starts somewhere.”</blockquote>
+        <p>We look forward to hearing from you.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-wrap">
+      <p>© 2026 Knox AI Ops · Version 1.4</p>
+      <p>Faith • Family • Integrity</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+      const mailto = `mailto:knoxaiops@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
