@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Knox AI Ops</title>
-  <meta name="description" content="Contact Knox AI Ops by email or phone. View our regular hours of operation and prepare a simple email message.">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Contact Knox AI Ops by email, phone, or LinkedIn. View our regular hours of operation and prepare a simple email message.">
+  <link rel="stylesheet" href="styles.css?v=1.6">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap nav-wrap">
-      <a class="brand" href="index.html">Knox AI Ops</a>
+      <a class="brand" href="index.html?v=1.6">Knox AI Ops</a>
       <nav aria-label="Main navigation">
-        <a href="index.html">Front Porch</a>
+        <a href="index.html?v=1.6">Front Porch</a>
         <a href="conversation-room.html">Conversation Room</a>
+        <a href="free-reads.html">Free Reads</a>
         <a href="gift-shop.html">Gift Shop</a>
+        <a href="conversation-room.html">About Knox AI Ops</a>
         <a aria-current="page" href="contact.html">Contact</a>
       </nav>
     </div>
@@ -33,6 +35,7 @@
           <h2>Reach Us</h2>
           <p><strong>Email</strong><br><a href="mailto:knoxaiops@gmail.com">knoxaiops@gmail.com</a></p>
           <p><strong>Phone</strong><br><a href="tel:+13213280884">(321) 328-0884</a></p>
+          <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/company/knox-ai-ops" target="_blank" rel="noopener">Follow Knox AI Ops on LinkedIn</a></p>
 
           <h3>Hours of Operation</h3>
           <p>Monday–Thursday: 9:00 AM–4:00 PM ET<br>
@@ -79,7 +82,7 @@
 
   <footer>
     <div class="wrap footer-wrap">
-      <p>© 2026 Knox AI Ops · Version 1.4</p>
+      <p>© 2026 Knox AI Ops · Version 1.6</p>
       <p>Faith • Family • Integrity</p>
     </div>
   </footer>
@@ -87,15 +90,12 @@
   <script>
     document.getElementById('contact-form').addEventListener('submit', function (event) {
       event.preventDefault();
-
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
-
       const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
       const mailto = `mailto:knoxaiops@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
       window.location.href = mailto;
     });
   </script>
